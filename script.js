@@ -68,26 +68,28 @@ for(i=0; i<allparafos.length; i++){
     allparafos[3].style.backgroundColor = "red"
 
 }
+console.log('-------chanhe text----------------------------------');
+
+const textTwo = document.getElementById("p2");
+textTwo.id = "nuevaID"
+console.log(textTwo);
+console.log('-------chanhe id----------------------------------');
+
 const textOne = document.getElementById("p1");
 textOne.innerText = "Este es mi nuevo texto"
 console.log(textOne);    
 
-const textTwo = document.getElementById("#p2");
-textTwo.innerHTML = "nuevaID"
+console.log('-------Exercice 3----------------------------------');      
 
-       
 // Ejercicio 3
 // Desarrolla la siguiente mini-aplicación usando el HTML que tienes más abajo, y dando todos los estilos y funcionalidades con JS.
 
-// const changecolorh1 = document.querySelector("h1");
-// changecolorh1.style.color = "yellow"
-
 // El color del texto con el año cambia cada segundo.
+const now = new Date();
+console.log(now);
+const secunds = now.getSeconds();
+console.log(secunds);
 
-// La fecha y su color de fondo cambian cada segundo (la hora se actualiza, funcionando como reloj).
 
-// Los desafíos completados tienen color de fondo verde.
 
-// Los desafíos en curso tienen color de fondo amarillo.
-// Los desafíos sin empezar tienen color de fondo rojo.
 

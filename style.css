@@ -1,0 +1,5 @@
+.ordertitle{
+    display: flex;
+    /* border: rebeccapurple solid 1px; */
+    align-items: center;
+}
