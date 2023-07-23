@@ -56,8 +56,8 @@ console.log(`Jul ${day} /0${month}/${hours}: ${minutes}`);
 const dates =document.querySelector(".calendary")
 const tag = document.createElement("span")
 tag.innerText = `Jul ${day}/0${month}/${years}: ${hours}:${minutes}`
-console.log(tag);
 dates.appendChild(tag)
+console.log(tag);
 console.warn(dates);
 console.log('*****function change Color *****');
 
@@ -99,11 +99,51 @@ tagLiAll.forEach((node) => {
   node.style.backgroundColor = "red";
 
 });
+// ---------------------------------------------
+// ---------------------------------------------
+// ---------------------------------------------
+let count = 0;
+const section = document.querySelector(".btones")
 
+for (let i = 1; i < 101; i++) {
 
+const createButton = document.createElement("button");
+createButton.innerHTML = `${i}`;
+//se le asigna al buton el numero de iteacion:como su contenido en html
+section.appendChild(createButton);
 
+  if (i % 5 === 0) {
+    count++;
+    createButton.style.color = "orange";
+  } else if (i % 2 === 0) {
+    createButton.style.backgroundColor = "#E74C3C";
+  } else {
+    createButton.style.backgroundColor = "#3498DB";
+  }
+}
+// ------------------------------------------------------->
+// ------------------------------------------------------->
 
+function changecolorBotons() {
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach((button, index) => {
+    setInterval(() => {
+      const r = Math.floor(Math.random() * 255);
+      const g = Math.floor(Math.random() * 255);
+      const b = Math.floor(Math.random() * 255);
 
+      const color = `rgb(${r},${g},${b})`;
+
+      buttons.forEach((btn) => {
+        btn.style.backgroundColor = ""; // Restablecer el color de fondo original
+      });
+
+      button.style.backgroundColor = color;
+    }, (index + 1) * 2000); 
+  });
+}
+
+changecolorBotons();
 
 
 

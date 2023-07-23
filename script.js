@@ -73,7 +73,7 @@ console.log('-------chanhe text----------------------------------');
 const textTwo = document.getElementById("p2");
 textTwo.id = "nuevaID"
 console.log(textTwo);
-console.log('-------chanhe id----------------------------------');
+console.log('-------changeId----------------------------');
 
 const textOne = document.getElementById("p1");
 textOne.innerText = "Este es mi nuevo texto"
@@ -88,7 +88,28 @@ console.log('-------Exercice 3----------------------------------');
 const now = new Date();
 console.log(now);
 const secunds = now.getSeconds();
-console.log(secunds);
+console.log(`Este cambia cada segundo: ${secunds}`);
+console.log('------------***-------------------**---------');
+
+// El ejercicio consiste en crear, usando exclusivamente JavaScript, 100 botones e introducirlos en la section.
+
+// Estos botones tendrán como texto su número: el primer botón tendrá 1, el segundo 2, etc.
+// El primer botón tendrá un color de fondo rojo , el segundo azul , el tercero rojo , el cuarto azul , etc.
+// Una vez que haya creado los botones, da a cada quinto botón un color de texto verde .
+
+console.log('------*******--funcion arcoIris-----****');
+// La tarea consiste en seleccionar todos los span, iterar sobre ellos y asignarle cada uno de los colores del array tal que las letras formen el arcoiris.
+// ---------------------------------------------------------------------------------
+    const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+    const allSpan = document.querySelectorAll("span");
+    console.log(allSpan);
+
+    allSpan.forEach((span, index) => {
+    span.style.color = colors[index];
+    console.log(span);
+    });
+
 
 
 
